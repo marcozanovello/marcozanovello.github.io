@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Marco Zanovello — Applied AI &amp; ICT Engineering</title>
-<meta content="MSc ICT Engineering student at the University of Padova. Machine learning, computer vision and data science projects. Seeking a curricular thesis internship." name="description"/>
+<meta content="MSc ICT Engineering student at the University of Padova. Machine learning, computer vision and data science projects. Seeking a curricular thesis internship." data-meta-i18n="description" name="description"/>
 <meta content="Marco Zanovello — ICT Engineering Portfolio" property="og:title"/>
 <meta content="Applied AI, Machine Learning, Computer Vision and Data Science." property="og:description"/>
 <meta content="https://marcozanovello.github.io" property="og:url"/>
@@ -222,7 +222,7 @@
 nav{background:rgba(243,246,250,.96)} .nav-links{background:transparent;border:0}.nav-links a.active{background:var(--primary-light);color:var(--primary-hover)}
 .page{display:block;flex:none;animation:none;scroll-margin-top:90px} .page:not(#home){border-top:1px solid var(--border)}
 .hero-wrapper{padding-top:3.8rem}.hero-name{font-size:clamp(32px,4.6vw,48px)} .hero-desc{margin-bottom:1.25rem}.hero-desc strong{color:var(--text);font-weight:600}
-.availability{display:flex;align-items:baseline;gap:9px;color:#176b60;font-size:13px;font-weight:600;line-height:1.5;margin-bottom:1.5rem}.availability span{width:8px;height:8px;border-radius:50%;background:#258b80;flex-shrink:0;align-self:center}
+.availability{display:flex;align-items:baseline;gap:9px;color:#176b60;font-size:13px;font-weight:600;line-height:1.5;margin-bottom:1.5rem}
 .avatar-wrap{width:72px;height:72px}.hero-card{box-shadow:none}.home-section-label{padding:0 2.5rem;font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted)}
 .skills-strip{padding-top:1rem}.skill-pill{border:0;border-top:2px solid var(--border);border-radius:0;background:transparent;box-shadow:none;padding:1rem 0}.skill-pill:hover{transform:none}.skill-pill-title{padding:0;background:transparent;border:0}.project-card{cursor:pointer;box-shadow:none}.project-card::before{height:3px}.project-card:hover::before{height:3px}.project-kind{font-size:11px;color:var(--muted)}
 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--border);margin-top:3px}.metrics strong{display:block;font-family:var(--round);font-size:23px;color:var(--primary-hover);letter-spacing:-.03em}.metrics small{display:block;font-size:11px;color:var(--muted);line-height:1.4}
@@ -276,6 +276,13 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 .project-card:nth-child(-n+2) .project-heading{grid-template-columns:minmax(0,1fr) 180px;gap:14px}
 @media(max-width:1100px) and (min-width:861px){.project-heading{grid-template-columns:minmax(0,1fr) 94px;gap:9px}.project-card:nth-child(-n+2) .project-heading{grid-template-columns:minmax(0,1fr) 132px;gap:12px}}
 @media(max-width:480px){.project-card:nth-child(-n+2) .project-heading,.project-heading{grid-template-columns:minmax(0,1fr) 100px;gap:8px;min-height:90px}}
+
+/* Bilingual switch: preserves existing design */
+.language-switch{display:flex;gap:3px;padding:3px;border:1px solid var(--border);border-radius:10px;background:var(--surface);margin-left:4px}
+.lang-button{border:0;border-radius:7px;padding:7px 11px;background:transparent;color:var(--muted);font:600 12px var(--sans);cursor:pointer}
+.lang-button[aria-pressed="true"]{background:var(--primary);color:white}
+.lang-button:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+@media(max-width:650px){.nav-inner{padding:0.8rem 1rem}.language-switch{margin-left:auto}.lang-button{padding:6px 9px}}
 </style>
 </head>
 <body>
@@ -284,20 +291,20 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 <a class="nav-name" href="#home"><span class="nav-dot"></span>Marco Zanovello</a>
 <div class="nav-links">
 <a class="active" href="#home" id="nav-home">Home</a>
-<a href="#projects" id="nav-projects">Projects</a>
-<a href="#about" id="nav-about">About</a>
-<a href="#contact" id="nav-contact">Contact</a>
+<a href="#projects" id="nav-projects"><span data-i18n="0">Projects</span></a>
+<a href="#about" id="nav-about"><span data-i18n="1">About</span></a>
+<a href="#contact" id="nav-contact"><span data-i18n="2">Contact</span></a>
 </div>
-</div>
+<div aria-label="Language / Lingua" class="language-switch" role="group"><button aria-pressed="true" class="lang-button" data-lang="en" type="button">EN</button><button aria-pressed="false" class="lang-button" data-lang="it" type="button">IT</button></div></div>
 </nav>
 <div class="page active" id="home">
 <div class="hero-wrapper">
 <div class="hero-main">
-<h1 class="hero-name">I'm Marco.<br/><span class="highlight">ICT Engineering MSc Student</span></h1>
-<p class="hero-desc">I’m a Master’s student at the University of Padova with a strong interest in applied AI, machine learning and data science. My academic projects combine model development, signal processing, computer vision and experimental evaluation to address engineering problems.</p>
-<div class="availability"><strong>Available for a curricular internship &amp; Master’s thesis</strong><small>All MSc coursework completed</small></div><div class="hero-links">
-<a class="btn btn-primary" href="#projects">See my projects</a>
-<a class="btn btn-secondary" href="Zanovello_Marco_CV.pdf" rel="noopener noreferrer" target="_blank">Download CV</a>
+<h1 class="hero-name"><span data-i18n="3">I'm Marco.</span><br/><span class="highlight"><span data-i18n="4">ICT Engineering MSc Student</span></span></h1>
+<p class="hero-desc"><span data-i18n="5">I’m a Master’s student at the University of Padova with a strong interest in applied AI, machine learning and data science. My academic projects combine model development, signal processing, computer vision and experimental evaluation to address engineering problems.</span></p>
+<div class="availability"><strong><span data-i18n="6">Available for a curricular internship &amp; Master’s thesis</span></strong><small><span data-i18n="7">All MSc coursework completed</span></small></div><div class="hero-links">
+<a class="btn btn-primary" href="#projects"><span data-i18n="8">See my projects</span></a>
+<a class="btn btn-secondary" data-cv-link="true" href="Zanovello_Marco_CV.pdf" rel="noopener noreferrer" target="_blank"><span data-i18n="9">Download CV</span></a>
 <a class="btn btn-secondary" href="https://github.com/marcozanovello" rel="noopener noreferrer" target="_blank">GitHub</a>
 <a class="btn btn-secondary" href="https://www.linkedin.com/in/marco-zanovello-2b1b01197" rel="noopener noreferrer" target="_blank">LinkedIn</a>
 </div>
@@ -310,52 +317,52 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 </div>
 <div class="profile-meta">
 <span class="profile-meta-name">Marco Zanovello</span>
-<span class="profile-meta-role">ICT Engineering · Life &amp; Health</span>
-<span class="profile-meta-loc">Padova, Italy</span>
+<span class="profile-meta-role"><span data-i18n="10">ICT Engineering · Life &amp; Health</span></span>
+<span class="profile-meta-loc"><span data-i18n="11">Padova, Italy</span></span>
 </div>
 </div>
 </div>
 </div>
 <div class="skills-strip">
 <div class="skill-pill">
-<div class="skill-pill-title theme-blue">Programming</div>
+<div class="skill-pill-title theme-blue"><span data-i18n="12">Programming</span></div>
 <div class="skill-pill-text">Python, SQL, C, Java, MATLAB(basic)</div>
 </div>
 <div class="skill-pill">
-<div class="skill-pill-title theme-purple">AI &amp; Machine Learning</div>
+<div class="skill-pill-title theme-purple"><span data-i18n="13">AI &amp; Machine Learning</span></div>
 <div class="skill-pill-text">PyTorch, TensorFlow, scikit-learn, OpenCV</div>
 </div>
 <div class="skill-pill">
-<div class="skill-pill-title theme-teal">Data &amp; Signal Processing</div>
-<div class="skill-pill-text">Time-Series Forecasting, EEG Analysis, Statistical Analysis</div>
+<div class="skill-pill-title theme-teal"><span data-i18n="14">Data &amp; Signal Processing</span></div>
+<div class="skill-pill-text"><span data-i18n="15">Time-Series Forecasting, EEG Analysis, Statistical Analysis</span></div>
 </div>
 <div class="skill-pill">
-<div class="skill-pill-title theme-amber">Databases &amp; Tools</div>
-<div class="skill-pill-text">PostgreSQL, ER Modeling, Git, LaTeX</div>
+<div class="skill-pill-title theme-amber"><span data-i18n="16">Databases &amp; Tools</span></div>
+<div class="skill-pill-text"><span data-i18n="17">PostgreSQL, ER Modeling, Git, LaTeX</span></div>
 </div>
 </div>
 </div>
 <div class="page" id="projects">
 <div class="page-header">
-<h2 class="page-title">Projects</h2>
-<p class="page-subtitle">Selected academic projects, from model development and experimental evaluation to computer vision and data engineering.</p>
+<h2 class="page-title"><span data-i18n="18">Projects</span></h2>
+<p class="page-subtitle"><span data-i18n="19">Selected academic projects, from model development and experimental evaluation to computer vision and data engineering.</span></p>
 </div>
 <div class="projects-grid">
 <a class="project-card accent-amber" href="https://github.com/marcozanovello/electricity-load-forecasting" rel="noopener noreferrer" target="_blank"><div class="project-content">
-<div class="project-heading"><div class="project-heading-text"><span class="project-category text-amber">Time-Series Analysis</span><span class="project-kind">Academic team project</span>
-<div class="project-title">Electricity Load<br>Forecasting</div></div><img alt="Electricity grid and illustrative forecast" class="project-illustration" height="450" loading="lazy" src="assets/electricity.webp" width="800"/></div>
-<div class="project-desc">Designed and evaluated single-scale and multi-scale 1D CNNs inspired by TimesNet for electricity load forecasting. Investigated seasonal imbalance in data splitting, introduced a calendar-year evaluation protocol and assessed robustness across three random seeds.</div><div class="metrics"><div><strong>24–27%</strong><small>lower test MSE vs. baseline</small></div><div><strong>17.7%</strong><small>fewer trainable parameters</small></div></div>
+<div class="project-heading"><div class="project-heading-text"><span class="project-category text-amber"><span data-i18n="20">Time-Series Analysis</span></span><span class="project-kind"><span data-i18n="21">Academic team project</span></span>
+<div class="project-title"><span data-i18n="22">Electricity Load</span><br/><span data-i18n="23">Forecasting</span></div></div><img alt="Electricity grid and illustrative forecast" class="project-illustration" height="450" loading="lazy" src="assets/electricity.webp" width="800"/></div>
+<div class="project-desc"><span data-i18n="24">Designed and evaluated single-scale and multi-scale 1D CNNs inspired by TimesNet for electricity load forecasting. Investigated seasonal imbalance in data splitting, introduced a calendar-year evaluation protocol and assessed robustness across three random seeds.</span></div><div class="metrics"><div><strong>24–27%</strong><small><span data-i18n="25">lower test MSE vs. baseline</span></small></div><div><strong>17.7%</strong><small><span data-i18n="26">fewer trainable parameters</span></small></div></div>
 <div class="project-meta">
 <div class="project-tags">
-<span class="project-tag theme-amber">Time-Series</span>
+<span class="project-tag theme-amber"><span data-i18n="27">Time-Series</span></span>
 <span class="project-tag theme-amber">Deep Learning</span>
 </div>
 <span class="project-link-hint">Repository</span>
 </div>
 </div></a><a class="project-card accent-blue" href="https://github.com/marcozanovello/eeg-motor-imagery-classification" rel="noopener noreferrer" target="_blank"><div class="project-content">
-<div class="project-heading"><div class="project-heading-text"><span class="project-category text-blue">BCI &amp; Deep Learning</span><span class="project-kind">Academic team project</span>
-<div class="project-title">EEG Motor Imagery Classification</div></div><img alt="EEG cap, brain and signal traces" class="project-illustration" height="450" loading="lazy" src="assets/eeg.webp" width="800"/></div>
-<div class="project-desc">Developed a lightweight multi-scale Inception CNN for three-class EEG motor imagery classification and benchmarked it against EEGNet. Evaluated cross-subject generalization, computational efficiency and learned feature representations on the Kaya dataset across five random seeds.</div><div class="metrics"><div><strong>≈69%</strong><small>mean test accuracy</small></div><div><strong>≈2.7k</strong><small>model parameters</small></div></div>
+<div class="project-heading"><div class="project-heading-text"><span class="project-category text-blue"><span data-i18n="28">BCI &amp; Deep Learning</span></span><span class="project-kind"><span data-i18n="29">Academic team project</span></span>
+<div class="project-title"><span data-i18n="30">EEG Motor Imagery Classification</span></div></div><img alt="EEG cap, brain and signal traces" class="project-illustration" height="450" loading="lazy" src="assets/eeg.webp" width="800"/></div>
+<div class="project-desc"><span data-i18n="31">Developed a lightweight multi-scale Inception CNN for three-class EEG motor imagery classification and benchmarked it against EEGNet. Evaluated cross-subject generalization, computational efficiency and learned feature representations on the Kaya dataset across five random seeds.</span></div><div class="metrics"><div><strong>≈69%</strong><small><span data-i18n="32">mean test accuracy</span></small></div><div><strong>≈2.7k</strong><small><span data-i18n="33">model parameters</span></small></div></div>
 <div class="project-meta">
 <div class="project-tags">
 <span class="project-tag theme-blue">EEG / BCI</span>
@@ -364,9 +371,9 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 <span class="project-link-hint">Repository</span>
 </div>
 </div></a><a class="project-card accent-coral" href="https://github.com/marcozanovello/puzzle-reconstruction-cv" rel="noopener noreferrer" target="_blank"><div class="project-content">
-<div class="project-heading"><div class="project-heading-text"><span class="project-category text-coral">Computer Vision</span><span class="project-kind">Individual academic project</span>
-<div class="project-title">Puzzle Reconstruction</div></div><img alt="Puzzle pieces and feature matching" class="project-illustration" height="450" loading="lazy" src="assets/puzzle.webp" width="800"/></div>
-<div class="project-desc">Developed a reference-based jigsaw puzzle reconstruction pipeline using image segmentation, SIFT feature matching, homography and affine transformations. Evaluated the robustness and limitations of classical computer vision techniques on puzzles of varying complexity.</div>
+<div class="project-heading"><div class="project-heading-text"><span class="project-category text-coral">Computer Vision</span><span class="project-kind"><span data-i18n="34">Individual academic project</span></span>
+<div class="project-title"><span data-i18n="35">Puzzle Reconstruction</span></div></div><img alt="Puzzle pieces and feature matching" class="project-illustration" height="450" loading="lazy" src="assets/puzzle.webp" width="800"/></div>
+<div class="project-desc"><span data-i18n="36">Developed a reference-based jigsaw puzzle reconstruction pipeline using image segmentation, SIFT feature matching, homography and affine transformations. Evaluated the robustness and limitations of classical computer vision techniques on puzzles of varying complexity.</span></div>
 <div class="project-meta">
 <div class="project-tags">
 <span class="project-tag theme-coral">OpenCV</span>
@@ -375,28 +382,28 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 <span class="project-link-hint">Repository</span>
 </div>
 </div></a><a class="project-card accent-teal" href="https://github.com/marcozanovello/neural-connectivity-analysis" rel="noopener noreferrer" target="_blank"><div class="project-content">
-<div class="project-heading"><div class="project-heading-text"><span class="project-category text-teal">Biomedical Signal Processing</span><span class="project-kind">Academic team project</span>
-<div class="project-title">Neural Connectivity Analysis</div></div><img alt="Brain network and connectivity matrix" class="project-illustration" height="450" loading="lazy" src="assets/connectivity.webp" width="800"/></div>
-<div class="project-desc">
+<div class="project-heading"><div class="project-heading-text"><span class="project-category text-teal"><span data-i18n="37">Biomedical Signal Processing</span></span><span class="project-kind"><span data-i18n="38">Academic team project</span></span>
+<div class="project-title"><span data-i18n="39">Neural Connectivity Analysis</span></div></div><img alt="Brain network and connectivity matrix" class="project-illustration" height="450" loading="lazy" src="assets/connectivity.webp" width="800"/></div>
+<div class="project-desc"><span data-i18n="40">
         Analyzed functional and directed brain connectivity from EEG recordings using Hilbert-based phase extraction, PLV, PLI and Phase Transfer Entropy. Applied graph-theoretical methods to investigate network topology, centrality and thresholding.
-      </div>
+      </span></div>
 <div class="project-meta">
 <div class="project-tags">
 <span class="project-tag theme-teal">PLV / PLI</span>
-<span class="project-tag theme-teal">Graph Theory</span>
+<span class="project-tag theme-teal"><span data-i18n="41">Graph Theory</span></span>
 </div>
 <span class="project-link-hint">Repository</span>
 </div>
 </div></a><a class="project-card accent-purple" href="https://github.com/marcozanovello/stadium-ticketing-database" rel="noopener noreferrer" target="_blank"><div class="project-content">
-<div class="project-heading"><div class="project-heading-text"><span class="project-category text-purple">Data Architecture</span><span class="project-kind">Academic team project</span>
-<div class="project-title">Stadium Ticketing Database</div></div><img alt="Football stadium connected to a database" class="project-illustration" height="450" loading="lazy" src="assets/stadium.webp" width="800"/></div>
-<div class="project-desc">
+<div class="project-heading"><div class="project-heading-text"><span class="project-category text-purple"><span data-i18n="42">Data Architecture</span></span><span class="project-kind"><span data-i18n="43">Academic team project</span></span>
+<div class="project-title"><span data-i18n="44">Stadium Ticketing Database</span></div></div><img alt="Football stadium connected to a database" class="project-illustration" height="450" loading="lazy" src="assets/stadium.webp" width="800"/></div>
+<div class="project-desc"><span data-i18n="45">
         Designed and implemented a relational database for football stadium ticketing, covering requirements analysis, conceptual and logical modeling, and PostgreSQL implementation with custom triggers, integrity constraints and analytical SQL queries.
-      </div>
+      </span></div>
 <div class="project-meta">
 <div class="project-tags">
 <span class="project-tag theme-purple">PostgreSQL</span>
-<span class="project-tag theme-purple">ER Design</span>
+<span class="project-tag theme-purple"><span data-i18n="46">ER Design</span></span>
 </div>
 <span class="project-link-hint">Repository</span>
 </div>
@@ -404,91 +411,91 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 </div>
 <div class="page" id="about">
 <div class="page-header">
-<h2 class="page-title">About</h2>
-<p class="page-subtitle">Academic background, technical focus, and personal interests.</p>
+<h2 class="page-title"><span data-i18n="47">About</span></h2>
+<p class="page-subtitle"><span data-i18n="48">Academic background, technical focus, and personal interests.</span></p>
 </div>
 <div class="about-layout">
 <div>
 <div class="about-card">
-<div class="about-card-label">Background</div>
-<p class="about-text">I am a Master’s student in ICT for Internet and Multimedia at the <strong>University of Padova</strong> (Life and Health curriculum), with all graduate coursework examinations completed. I am seeking a <strong>4–6 month curricular internship</strong> in AI, machine learning, computer vision or data science, as part of my Master’s thesis, ideally in an applied research or R&amp;D environment. My Bachelor’s degree in Information Engineering included a thesis on modeling and control of convertiplane flight dynamics.</p>
+<div class="about-card-label"><span data-i18n="49">Background</span></div>
+<p class="about-text"><span data-i18n="50">I am a Master’s student in ICT for Internet and Multimedia at the </span><strong><span data-i18n="51">University of Padova</span></strong><span data-i18n="52"> (Life and Health curriculum), with all graduate coursework examinations completed. I am seeking a </span><strong><span data-i18n="53">4–6 month curricular internship</span></strong><span data-i18n="54"> in AI, machine learning, computer vision or data science, as part of my Master’s thesis, ideally in an applied research or R&amp;D environment. My Bachelor’s degree in Information Engineering included a thesis on modeling and control of convertiplane flight dynamics.</span></p>
 </div>
 <div class="about-card">
-<div class="about-card-label">What I've been working on</div>
-<p class="about-text">My interests lie at the intersection of artificial intelligence, engineering and applied mathematics. I enjoy understanding how algorithms work, designing experiments, comparing different approaches and investigating their limitations.</p>
+<div class="about-card-label"><span data-i18n="55">What I've been working on</span></div>
+<p class="about-text"><span data-i18n="56">My interests lie at the intersection of artificial intelligence, engineering and applied mathematics. I enjoy understanding how algorithms work, designing experiments, comparing different approaches and investigating their limitations.</span></p>
 </div>
 <div class="about-card">
-<div class="about-card-label">Beyond the screen</div>
-<p class="about-text">
+<div class="about-card-label"><span data-i18n="57">Beyond the screen</span></div>
+<p class="about-text"><span data-i18n="58">
           When I'm not coding, I enjoy working on hands-on DIY and hardware projects, home improvement, tending my collection of houseplants, strength training, and planning my next trip.
-        </p>
+        </span></p>
 </div>
 </div>
 <div>
 <div class="sidebar-block">
-<div class="sidebar-label">Education</div>
+<div class="sidebar-label"><span data-i18n="59">Education</span></div>
 <div class="sidebar-item">
 <div class="sidebar-dot"></div>
-<div>
+<div><span data-i18n="60">
             MSc ICT for Internet and Multimedia
-            <span class="sidebar-sub">Curriculum: Life and Health · University of Padova · 2024 – present</span>
+            </span><span class="sidebar-sub"><span data-i18n="61">Curriculum: Life and Health · University of Padova · 2024 – present</span></span>
 </div>
 </div>
 <div class="sidebar-item">
 <div class="sidebar-dot"></div>
-<div>
+<div><span data-i18n="62">
             BSc Information Engineering
-            <span class="sidebar-sub">University of Padova · 2019 – 2024</span>
+            </span><span class="sidebar-sub"><span data-i18n="63">University of Padova · 2019 – 2024</span></span>
 </div>
 </div>
 </div>
 <div class="sidebar-block">
-<div class="sidebar-label">Key Coursework</div>
+<div class="sidebar-label"><span data-i18n="64">Key Coursework</span></div>
 <div class="coursework-group">
-<div class="coursework-group-label">ML, Vision &amp; Data</div>
+<div class="coursework-group-label"><span data-i18n="65">ML, Vision &amp; Data</span></div>
 <div class="coursework-tags">
-<span class="coursework-tag theme-purple">Neural Networks &amp; Deep Learning</span>
-<span class="coursework-tag theme-purple">ML for Human Data</span>
+<span class="coursework-tag theme-purple"><span data-i18n="66">Neural Networks &amp; Deep Learning</span></span>
+<span class="coursework-tag theme-purple"><span data-i18n="67">ML for Human Data</span></span>
 <span class="coursework-tag theme-purple">Computer Vision</span>
-<span class="coursework-tag theme-purple">Stochastic Processes</span>
+<span class="coursework-tag theme-purple"><span data-i18n="68">Stochastic Processes</span></span>
 </div>
 </div>
 <div class="coursework-group">
-<div class="coursework-group-label">Healthcare, Rehab &amp; Security</div>
+<div class="coursework-group-label"><span data-i18n="69">Healthcare, Rehab &amp; Security</span></div>
 <div class="coursework-tags">
-<span class="coursework-tag theme-blue">Sports Eng. &amp; Rehabilitation Devices</span>
-<span class="coursework-tag theme-blue">Secure Digital Healthcare</span>
+<span class="coursework-tag theme-blue"><span data-i18n="70">Sports Eng. &amp; Rehabilitation Devices</span></span>
+<span class="coursework-tag theme-blue"><span data-i18n="71">Secure Digital Healthcare</span></span>
 <span class="coursework-tag theme-blue">E-Health</span>
-<span class="coursework-tag theme-blue">Bioelectromagnetism</span>
+<span class="coursework-tag theme-blue"><span data-i18n="72">Bioelectromagnetism</span></span>
 </div>
 </div>
 <div class="coursework-group">
-<div class="coursework-group-label">Networks, Systems &amp; Management</div>
+<div class="coursework-group-label"><span data-i18n="73">Networks, Systems &amp; Management</span></div>
 <div class="coursework-tags">
-<span class="coursework-tag theme-teal">Foundations of Databases</span>
-<span class="coursework-tag theme-teal">IoT &amp; Smart Cities</span>
-<span class="coursework-tag theme-teal">Network Modeling</span>
-<span class="coursework-tag theme-teal">Optimization Methods</span>
-<span class="coursework-tag theme-teal">Project Management</span>
+<span class="coursework-tag theme-teal"><span data-i18n="74">Foundations of Databases</span></span>
+<span class="coursework-tag theme-teal"><span data-i18n="75">IoT &amp; Smart Cities</span></span>
+<span class="coursework-tag theme-teal"><span data-i18n="76">Network Modeling</span></span>
+<span class="coursework-tag theme-teal"><span data-i18n="77">Optimization Methods</span></span>
+<span class="coursework-tag theme-teal"><span data-i18n="78">Project Management</span></span>
 </div>
 </div>
 </div>
 <div class="sidebar-block">
-<div class="sidebar-label">Languages</div>
-<div class="sidebar-item"><div class="sidebar-dot"></div>Italian (Native)</div>
-<div class="sidebar-item"><div class="sidebar-dot"></div>English (B2)</div>
-<div class="sidebar-item"><div class="sidebar-dot"></div>French (B1)</div>
+<div class="sidebar-label"><span data-i18n="79">Languages</span></div>
+<div class="sidebar-item"><div class="sidebar-dot"></div><span data-i18n="80">Italian (Native)</span></div>
+<div class="sidebar-item"><div class="sidebar-dot"></div><span data-i18n="81">English (B2)</span></div>
+<div class="sidebar-item"><div class="sidebar-dot"></div><span data-i18n="82">French (B1)</span></div>
 </div>
 </div>
 </div>
 </div>
 <div class="page" id="contact">
 <div class="page-header">
-<h2 class="page-title">Contact</h2>
-<p class="page-subtitle">Let's get in touch.</p>
+<h2 class="page-title"><span data-i18n="83">Contact</span></h2>
+<p class="page-subtitle"><span data-i18n="84">Let's get in touch.</span></p>
 </div>
 <div class="contact-layout">
-<p class="contact-intro">I am currently seeking a 4–6 month curricular internship for my Master’s thesis in AI, machine learning, computer vision or data science. I would be happy to discuss potential thesis projects and R&amp;D opportunities.</p>
+<p class="contact-intro"><span data-i18n="85">I am currently seeking a 4–6 month curricular internship for my Master’s thesis in AI, machine learning, computer vision or data science. I would be happy to discuss potential thesis projects and R&amp;D opportunities.</span></p>
 <div class="contact-links">
 <a class="contact-link" href="mailto:zanovellomarco41@gmail.com">
 <div class="contact-link-text">
@@ -508,21 +515,44 @@ nav{background:rgba(255,255,255,.96)}.nav-inner{padding-top:1.05rem;padding-bott
 <span class="contact-link-value">linkedin.com/in/marco-zanovello-2b1b01197</span>
 </div>
 </a>
-<a class="contact-link" href="Zanovello_Marco_CV.pdf" rel="noopener noreferrer" target="_blank">
+<a class="contact-link" data-cv-link="true" href="Zanovello_Marco_CV.pdf" rel="noopener noreferrer" target="_blank">
 <div class="contact-link-text">
 <span class="contact-link-label theme-amber">Curriculum Vitae</span>
-<span class="contact-link-value">Download PDF Resume</span>
+<span class="contact-link-value"><span data-i18n="86">Download PDF Resume</span></span>
 </div>
 </a>
 </div>
 </div>
 </div>
-<footer>
+<footer><span data-i18n="87">
   © 2026 Marco Zanovello · MSc in ICT Engineering, University of Padova
-</footer>
+</span></footer>
 <script>const sections = [...document.querySelectorAll('.page')];
 const navLinks = [...document.querySelectorAll('.nav-links a')];
 function updateNav(){ const offset = document.querySelector('nav').offsetHeight + 100; let current = sections[0].id; for(const section of sections){ if(section.getBoundingClientRect().top <= offset) current = section.id; } if(window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5) current = sections[sections.length-1].id; navLinks.forEach(a=>{const active=a.hash==='#'+current; a.classList.toggle('active',active); if(active) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current');}); }
 window.addEventListener('scroll',updateNav,{passive:true}); window.addEventListener('resize',updateNav); window.addEventListener('load',updateNav); updateNav();</script>
-</body>
+<script>
+(function(){
+const pairs=[["Projects","Progetti"],["About","Chi sono"],["Contact","Contatti"],["I'm Marco.","Sono Marco."],["ICT Engineering MSc Student","Studente magistrale ICT"],["I’m a Master’s student at the University of Padova with a strong interest in applied AI, machine learning and data science. My academic projects combine model development, signal processing, computer vision and experimental evaluation to address engineering problems.","Sono uno studente magistrale presso l’Università di Padova, con un forte interesse per l’intelligenza artificiale applicata, il machine learning e la data science. I miei progetti accademici combinano sviluppo di modelli, elaborazione di segnali, computer vision e valutazione sperimentale per affrontare problemi ingegneristici."],["Available for a curricular internship & Master’s thesis","Disponibile per tirocinio curriculare e tesi magistrale"],["All MSc coursework completed","Tutti gli esami magistrali completati"],["See my projects","Scopri i progetti"],["Download CV","Scarica il CV"],["ICT Engineering · Life & Health","Ingegneria ICT · Life & Health"],["Padova, Italy","Padova, Italia"],["Programming","Programmazione"],["AI & Machine Learning","AI e Machine Learning"],["Data & Signal Processing","Dati ed elaborazione dei segnali"],["Time-Series Forecasting, EEG Analysis, Statistical Analysis","Previsione di serie temporali, analisi EEG, analisi statistica"],["Databases & Tools","Database e strumenti"],["PostgreSQL, ER Modeling, Git, LaTeX","PostgreSQL, modellazione ER, Git, LaTeX"],["Projects","Progetti"],["Selected academic projects, from model development and experimental evaluation to computer vision and data engineering.","Una selezione di progetti accademici: dallo sviluppo di modelli e dalla valutazione sperimentale alla computer vision e all’ingegneria dei dati."],["Time-Series Analysis","Analisi di serie temporali"],["Academic team project","Progetto accademico di gruppo"],["Electricity Load","Electricity Load"],["Forecasting","Forecasting"],["Designed and evaluated single-scale and multi-scale 1D CNNs inspired by TimesNet for electricity load forecasting. Investigated seasonal imbalance in data splitting, introduced a calendar-year evaluation protocol and assessed robustness across three random seeds.","Progettate e valutate CNN 1D a scala singola e multiscala, ispirate a TimesNet, per la previsione del carico elettrico. Analizzato lo sbilanciamento stagionale nella suddivisione dei dati, introdotto un protocollo di valutazione per anno solare e verificata la robustezza su tre seed casuali."],["lower test MSE vs. baseline","MSE di test inferiore rispetto alla baseline"],["fewer trainable parameters","parametri addestrabili in meno"],["Time-Series","Serie temporali"],["BCI & Deep Learning","BCI e Deep Learning"],["Academic team project","Progetto accademico di gruppo"],["EEG Motor Imagery Classification","EEG Motor Imagery Classification"],["Developed a lightweight multi-scale Inception CNN for three-class EEG motor imagery classification and benchmarked it against EEGNet. Evaluated cross-subject generalization, computational efficiency and learned feature representations on the Kaya dataset across five random seeds.","Sviluppata una CNN Inception multiscala leggera per classificare tre classi di motor imagery da segnali EEG, confrontandola con EEGNet. Valutate la generalizzazione tra soggetti, l’efficienza computazionale e le rappresentazioni apprese sul dataset Kaya, utilizzando cinque seed casuali."],["mean test accuracy","accuratezza media sul test"],["model parameters","parametri del modello"],["Individual academic project","Progetto accademico individuale"],["Puzzle Reconstruction","Puzzle Reconstruction"],["Developed a reference-based jigsaw puzzle reconstruction pipeline using image segmentation, SIFT feature matching, homography and affine transformations. Evaluated the robustness and limitations of classical computer vision techniques on puzzles of varying complexity.","Sviluppata una pipeline di ricostruzione di puzzle a partire da un’immagine di riferimento, utilizzando segmentazione, corrispondenza di feature SIFT, omografie e trasformazioni affini. Valutate robustezza e limitazioni delle tecniche classiche di computer vision su puzzle di diversa complessità."],["Biomedical Signal Processing","Elaborazione di segnali biomedici"],["Academic team project","Progetto accademico di gruppo"],["Neural Connectivity Analysis","Neural Connectivity Analysis"],["Analyzed functional and directed brain connectivity from EEG recordings using Hilbert-based phase extraction, PLV, PLI and Phase Transfer Entropy. Applied graph-theoretical methods to investigate network topology, centrality and thresholding.","Analizzata la connettività cerebrale funzionale e direzionale da registrazioni EEG, mediante estrazione della fase con trasformata di Hilbert, PLV, PLI e Phase Transfer Entropy. Applicati metodi della teoria dei grafi per studiare topologia della rete, centralità e sogliatura."],["Graph Theory","Teoria dei grafi"],["Data Architecture","Architetture dei dati"],["Academic team project","Progetto accademico di gruppo"],["Stadium Ticketing Database","Stadium Ticketing Database"],["Designed and implemented a relational database for football stadium ticketing, covering requirements analysis, conceptual and logical modeling, and PostgreSQL implementation with custom triggers, integrity constraints and analytical SQL queries.","Progettato e implementato un database relazionale per la vendita di biglietti di uno stadio di calcio, dall’analisi dei requisiti alla modellazione concettuale e logica, fino all’implementazione in PostgreSQL con trigger personalizzati, vincoli di integrità e query SQL analitiche."],["ER Design","Progettazione ER"],["About","Chi sono"],["Academic background, technical focus, and personal interests.","Percorso accademico, interessi tecnici e personali."],["Background","Percorso"],["I am a Master’s student in ICT for Internet and Multimedia at the","Sono uno studente magistrale in ICT for Internet and Multimedia presso l’"],["University of Padova","Università di Padova"],["(Life and Health curriculum), with all graduate coursework examinations completed. I am seeking a","(curriculum Life and Health), con tutti gli esami magistrali completati. Cerco un"],["4–6 month curricular internship","tirocinio curriculare di 4–6 mesi"],["in AI, machine learning, computer vision or data science, as part of my Master’s thesis, ideally in an applied research or R&D environment. My Bachelor’s degree in Information Engineering included a thesis on modeling and control of convertiplane flight dynamics.","in AI, machine learning, computer vision o data science, da svolgere nell’ambito della tesi magistrale, preferibilmente in un contesto di ricerca applicata o R&S. Ho conseguito la laurea triennale in Ingegneria dell’Informazione con una tesi sulla modellazione e il controllo della dinamica di volo di un convertiplano."],["What I've been working on","Di cosa mi occupo"],["My interests lie at the intersection of artificial intelligence, engineering and applied mathematics. I enjoy understanding how algorithms work, designing experiments, comparing different approaches and investigating their limitations.","I miei interessi si collocano all’intersezione tra intelligenza artificiale, ingegneria e matematica applicata. Mi piace comprendere il funzionamento degli algoritmi, progettare esperimenti, confrontare approcci diversi e analizzarne i limiti."],["Beyond the screen","Oltre lo schermo"],["When I'm not coding, I enjoy working on hands-on DIY and hardware projects, home improvement, tending my collection of houseplants, strength training, and planning my next trip.","Quando non programmo, mi dedico a progetti pratici di fai-da-te e hardware, lavori di miglioramento della casa, cura delle piante, allenamento di forza e organizzazione di viaggi."],["Education","Formazione"],["MSc ICT for Internet and Multimedia","MSc ICT for Internet and Multimedia"],["Curriculum: Life and Health · University of Padova · 2024 – present","Curriculum: Life and Health · Università di Padova · 2024 – oggi"],["BSc Information Engineering","BSc Information Engineering"],["University of Padova · 2019 – 2024","Università di Padova · 2019 – 2024"],["Key Coursework","Insegnamenti principali"],["ML, Vision & Data","ML, visione e dati"],["Neural Networks & Deep Learning","Neural Networks & Deep Learning"],["ML for Human Data","ML for Human Data"],["Stochastic Processes","Stochastic Processes"],["Healthcare, Rehab & Security","Sanità, riabilitazione e sicurezza"],["Sports Eng. & Rehabilitation Devices","Sports Eng. & Rehabilitation Devices"],["Secure Digital Healthcare","Secure Digital Healthcare"],["Bioelectromagnetism","Bioelectromagnetism"],["Networks, Systems & Management","Reti, sistemi e gestione"],["Foundations of Databases","Foundations of Databases"],["IoT & Smart Cities","IoT & Smart Cities"],["Network Modeling","Network Modeling"],["Optimization Methods","Optimization Methods"],["Project Management","Project Management"],["Languages","Lingue"],["Italian (Native)","Italiano (madrelingua)"],["English (B2)","Inglese (B2)"],["French (B1)","Francese (B1)"],["Contact","Contatti"],["Let's get in touch.","Restiamo in contatto."],["I am currently seeking a 4–6 month curricular internship for my Master’s thesis in AI, machine learning, computer vision or data science. I would be happy to discuss potential thesis projects and R&D opportunities.","Sto cercando un tirocinio curriculare di 4–6 mesi per la tesi magistrale in AI, machine learning, computer vision o data science. Sono disponibile a valutare progetti di tesi e opportunità di ricerca e sviluppo."],["Download PDF Resume","Scarica il curriculum in PDF"],["© 2026 Marco Zanovello · MSc in ICT Engineering, University of Padova","© 2026 Marco Zanovello · Laurea magistrale in Ingegneria ICT, Università di Padova"]];
+const descriptions={en:'MSc ICT Engineering student at the University of Padova. Machine learning, computer vision and data science projects. Seeking a curricular thesis internship.',it:'Studente magistrale in Ingegneria ICT all’Università di Padova. Progetti di machine learning, computer vision e data science. Alla ricerca di un tirocinio curriculare per tesi.'};
+const titles={en:'Marco Zanovello — Applied AI & ICT Engineering',it:'Marco Zanovello — AI applicata e Ingegneria ICT'};
+const cvItAvailable=true;
+const params=new URLSearchParams(location.search);
+let language=params.get('lang');
+// English is the default on every visit without an explicit ?lang= parameter.
+// A selected language is reflected in the URL, so ?lang=it remains shareable.
+if(language!=='it' && language!=='en')language='en';
+function applyLanguage(lang,updateUrl){
+ language=lang;document.documentElement.lang=lang;document.title=titles[lang];
+ document.querySelector('meta[name="description"]').content=descriptions[lang];
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const p=pairs[Number(el.dataset.i18n)];if(p){const old=el.textContent;const leading=(old.match(/^\s*/) || [''])[0];const trailing=(old.match(/\s*$/) || [''])[0];el.textContent=leading+p[lang==='it'?1:0]+trailing}});
+ document.querySelectorAll('.lang-button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+ document.querySelectorAll('[data-cv-link]').forEach(a=>{a.href=lang==='it' && cvItAvailable?'Zanovello_Marco_CV_Italiano.pdf':'Zanovello_Marco_CV.pdf';a.title=lang==='it'&&!cvItAvailable?'CV attualmente disponibile in inglese':''});
+ try{localStorage.setItem('portfolio-language',lang)}catch(e){}
+ if(updateUrl){const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u.pathname+u.search+u.hash)}
+}
+document.querySelectorAll('.lang-button').forEach(b=>b.addEventListener('click',()=>applyLanguage(b.dataset.lang,true)));
+applyLanguage(language,false);
+})();
+</script></body>
 </html>
